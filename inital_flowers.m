@@ -1,0 +1,9 @@
+function M  = inital_flowers(u_0, u_1, v_0, v_1, z,...
+                                delta_1, delta_2, T_1 )
+
+M = - (u_0 ./ z) + (v_0 ./ z.^2) - (v_1 ./ z^2) .* exp(z.* delta_2)...
+- (v_0 ./ z.^2).* exp(z .* delta_1) +  (( ((u_1 - v_1.*(T_1))/z)) ...
+    + ((v_1/z.^2))).* exp(z.*(T_1))
+
+
+end 
